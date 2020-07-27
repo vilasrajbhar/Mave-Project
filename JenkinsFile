@@ -1,0 +1,47 @@
+pipeline {
+	agent {
+		node {
+		 label 'Windows10'
+		}
+	}
+	
+	stages {
+		stage ('Checkout code from SCM') {
+			steps{
+				git branch: 'master', url: 'https://github.com/vilasrajbhar/Maven-Project.git'
+			}
+		}
+		
+		stage ('Run Simple Cmd') {
+			steps{
+				bat """
+					echo "CI CD Pipeline is getting configured for Maven-Project."
+				"""
+			}
+		}
+		
+		stage ('Perform code compile using maven') {
+			steps{
+				bat """
+					mvn compile
+				"""
+			}
+		}
+		
+		stage ('Run Test') {
+			steps{
+				bat """
+					mvn test
+				"""
+			}
+		}
+		
+		stage ('Create Package') {
+			steps{
+				bat """
+					mvn package
+				"""
+			}
+		}
+	}
+}
