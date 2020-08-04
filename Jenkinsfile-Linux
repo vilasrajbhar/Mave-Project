@@ -1,0 +1,34 @@
+pipeline {
+	agent {
+		node {
+		 label 'Kali-Linux'
+		}
+	}
+	
+	stages {
+		stage ('Checkout code from SCM') {
+			steps{
+				git branch: 'master', url: 'https://github.com/vilasrajbhar/Maven-Project.git'
+			}
+		}
+		
+		stage ('Perform code compile using maven') {
+			steps{
+				sh 'mvn compile'
+			}
+		}
+		
+		stage ('Run Test') {
+			steps{
+				sh 'mvn test'
+			}
+		}
+		
+		stage ('Create Package') {
+			steps{
+
+				sh 'mvn package'
+			}
+		}
+	}
+}
