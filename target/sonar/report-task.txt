@@ -1,0 +1,7 @@
+organization=vilasrajbhar
+projectKey=maven-project
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.10466
+dashboardUrl=https://sonarcloud.io/dashboard?id=maven-project
+ceTaskId=AXO_nNYjspHXcy-vsTfq
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXO_nNYjspHXcy-vsTfq

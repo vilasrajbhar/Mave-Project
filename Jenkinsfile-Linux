@@ -34,7 +34,7 @@ pipeline {
 		stage('SonarQube analysis') {
 			steps{
 
-				sh 'mvn sonar:sonar'
+				sh 'mvn jacoco:prepare-agent install jacoco:report sonar:sonar'			
 			}
 		}
 		
