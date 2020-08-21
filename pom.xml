@@ -302,7 +302,7 @@
 	
   <repositories>
     <repository>
-      <id>maven-group</id>
+      <id>nexus-maven-group</id>
       <url>http://localhost:8085/repository/nexus-maven-group/</url>
     </repository>
   </repositories>
