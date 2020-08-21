@@ -307,5 +307,22 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
+	
+  <repositories>
+    <repository>
+      <id>maven-group</id>
+      <url>http://localhost:8085/repository/nexus-maven-group/</url>
+    </repository>
+  </repositories>
+<distributionManagement>
+    <snapshotRepository>
+      <id>nexus-maven-snapshot-hosted</id>
+      <url>http://your-host:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-maven-release-hosted</id>
+      <url>http://your-host:8081/repository/maven-releases/</url>
+    </repository>
+</distributionManagement>
 
 </project>
