@@ -303,11 +303,11 @@
 <distributionManagement>
     <snapshotRepository>
       <id>nexus-maven-repos</id>
-      <url>http://localhost:8081/repository/maven-snapshots/</url>
+      <url>http://localhost:8085/repository/nexus-maven-snapshot-hosted/</url>
     </snapshotRepository>
     <repository>
       <id>nexus-maven-repos</id>
-      <url>http://localhost:8081/repository/maven-releases/</url>
+      <url>http://localhost:8085/repository/nexus-maven-release-hosted/</url>
     </repository>
 </distributionManagement>
 
